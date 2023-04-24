@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: otus-crud-server
-        image: arsenteroganisyan/otus-crud-server:v6
+        image: arsenteroganisyan/otus-crud-server:v7
         ports:
         - containerPort: 8000
         env:

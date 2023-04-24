@@ -207,7 +207,7 @@ public class OtusHttpCrudServer {
         String r;
         try {
             Statement stmt=connection.createStatement();
-            String sql = "insert into user (name, age, loginm pwd_crypted) values (\"" + name + "\", " + age + ", \"" + login + "\", \"" + pwd + "\")";
+            String sql = "insert into user (name, age, login, pwd_crypted) values (\"" + name + "\", " + age + ", \"" + login + "\", \"" + pwd + "\")";
             System.out.println("request to database: " + sql);
             stmt.executeUpdate(sql);
             r = "";
