@@ -19,7 +19,7 @@ public class OtusHttpCrudServer {
         String user = args[2];
         String password = args[3];
         String db = args[4];
-        System.out.println("Started");
+        System.out.println("Started " + args[5]);
         System.out.println(host);
         System.out.println(port);
         System.out.println(user);
@@ -207,7 +207,7 @@ public class OtusHttpCrudServer {
         String r;
         try {
             Statement stmt=connection.createStatement();
-            String sql = "insert into user (name, age, loginm pwd_crypted) values (\"" + name + "\", " + age + ", " + login + ", " + pwd + ")";
+            String sql = "insert into user (name, age, loginm pwd_crypted) values (\"" + name + "\", " + age + ", \"" + login + "\", \"" + pwd + "\")";
             System.out.println("request to database: " + sql);
             stmt.executeUpdate(sql);
             r = "";

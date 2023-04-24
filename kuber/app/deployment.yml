@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: otus-crud-server-deployment
+  name: otus-crud-server
   labels:
-    app: simple-http-crud-server
+    app: otus-crud-server
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: simple-http-crud-server
+      app: otus-crud-server
   template:
     metadata:
       labels:
-        app: simple-http-crud-server
+        app: otus-crud-server
     spec:
       containers:
-      - name: simple-http-crud-server
-        image: arsenteroganisyan/otus-crud-server:v1
+      - name: otus-crud-server
+        image: arsenteroganisyan/otus-crud-server:v6
         ports:
         - containerPort: 8000
         env:
