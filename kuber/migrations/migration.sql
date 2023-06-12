@@ -4,5 +4,5 @@ name VARCHAR(255) NOT NULL,
 login VARCHAR(255) NOT NULL,
 pwd_crypted VARCHAR(255) NOT NULL,
 age INT NOT NULL,
-uder_role VARCHAR(255) NOT NULL DEFAULT "user"
+user_role VARCHAR(255) NOT NULL DEFAULT "user"
 );
