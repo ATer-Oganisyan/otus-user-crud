@@ -86,7 +86,7 @@ public class OtusHttpCrudServer {
         String r;
         try {
             Statement stmt=connection.createStatement();
-            ResultSet rs=stmt.executeQuery("select id, name, login, pwd, age, user_role from user where login = \"" + login + "\"");
+            ResultSet rs=stmt.executeQuery("select id, name, login, pwd_crypted, age, user_role from user where login = \"" + login + "\"");
             System.out.println("request to database");
             if (rs.next()) {
                 System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
