@@ -22,4 +22,4 @@ docker build -t arsenteroganisyan/otus-crud-server:v10 /Users/arsen/otus-user-cr
 
 
 ## To build migration container run:
-docker build -t arsenteroganisyan/otus-user-crud-sql-migrator:v4 /Users/arsen/otus-user-crud/kuber/migrations --no-cache --platform linux/amd64
+docker build -t arsenteroganisyan/otus-user-crud-sql-migrator:v5 /Users/arsen/otus-user-crud/kuber/migrations --no-cache --platform linux/amd64
