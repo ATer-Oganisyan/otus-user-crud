@@ -18,8 +18,8 @@ Enjoy :)
 
 ## To build container run:
 
-docker build -t arsenteroganisyan/otus-crud-server:v7 /Users/arsen/otus-user-crud --no-cache --platform linux/amd64
+docker build -t arsenteroganisyan/otus-crud-server:v8 /Users/arsen/otus-user-crud --no-cache --platform linux/amd64
 
 
 ## To build migration container run:
-docker build -t arsenteroganisyan/otus-user-crud-sql-migrator:v1 /Users/arsen/otus-user-crud/kuber/migrations --no-cache --platform linux/amd64
+docker build -t arsenteroganisyan/otus-user-crud-sql-migrator:v2 /Users/arsen/otus-user-crud/kuber/migrations --no-cache --platform linux/amd64

@@ -86,7 +86,7 @@ public class OtusHttpCrudServer {
         String r;
         try {
             Statement stmt=connection.createStatement();
-            ResultSet rs=stmt.executeQuery("select * from user where login = \"" + login + "\"");
+            ResultSet rs=stmt.executeQuery("select id, name, login, pwd, age, user_role from user where login = \"" + login + "\"");
             System.out.println("request to database");
             if (rs.next()) {
                 System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
@@ -95,7 +95,8 @@ public class OtusHttpCrudServer {
                 String age = "" + rs.getInt(5);
                 login = rs.getString(3);
                 String pwd = rs.getString(4);
-                r = "id:" + id + "\nname:" + name + "\nage:" + age + "\nlogin:" + login + "\npwd_crypted:" + pwd;
+                String role = rs.getString(6);
+                r = "id:" + id + "\nname:" + name + "\nage:" + age + "\nlogin:" + login + "\npwd_crypted:" + pwd + "\"role:" + role;
             } else {
                 r = "{}";
             }
@@ -204,10 +205,11 @@ public class OtusHttpCrudServer {
         String age = q.get("age");
         String login = q.get("login");
         String pwd = q.get("pwd");
+        String role = q.get("role");
         String r;
         try {
             Statement stmt=connection.createStatement();
-            String sql = "insert into user (name, age, login, pwd_crypted) values (\"" + name + "\", " + age + ", \"" + login + "\", \"" + pwd + "\")";
+            String sql = "insert into user (name, age, login, pwd_crypted, user_role) values (\"" + name + "\", " + age + ", \"" + login + "\", \"" + pwd + ", \"" + role + "\")";
             System.out.println("request to database: " + sql);
             stmt.executeUpdate(sql);
             r = "";
