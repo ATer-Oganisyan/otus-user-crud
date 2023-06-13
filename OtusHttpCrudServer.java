@@ -96,7 +96,7 @@ public class OtusHttpCrudServer {
                 login = rs.getString(3);
                 String pwd = rs.getString(4);
                 String role = rs.getString(6);
-                r = "id:" + id + "\nname:" + name + "\nage:" + age + "\nlogin:" + login + "\npwd_crypted:" + pwd + "\"role:" + role;
+                r = "id:" + id + "\nname:" + name + "\nage:" + age + "\nlogin:" + login + "\npwd_crypted:" + pwd + "\nrole:" + role;
             } else {
                 r = "{}";
             }

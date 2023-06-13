@@ -18,7 +18,7 @@ Enjoy :)
 
 ## To build container run:
 
-docker build -t arsenteroganisyan/otus-crud-server:v10 /Users/arsen/otus-user-crud --no-cache --platform linux/amd64
+docker build -t arsenteroganisyan/otus-crud-server:v11 /Users/arsen/otus-user-crud --no-cache --platform linux/amd64
 
 
 ## To build migration container run:
